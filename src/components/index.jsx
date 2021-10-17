@@ -26,11 +26,11 @@ export default function Earth(props) {
         <>
             <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
             <Stars radius={300} depth={60} count={20000} factor={7} saturation={0} fade={true} />
-            <mesh ref={cloudRef} position={[0, 0, 3]}>
+            <mesh ref={cloudRef} >
                 <sphereGeometry args={[1.005, 32, 32]} />
                 <meshPhongMaterial map={cloudsMap} opacity={0.4} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
             </mesh>
-            <mesh ref={earthRef} position={[0, 0, 3]}>
+            <mesh ref={earthRef} >
                 <sphereGeometry args={[1, 32, 32]} />
                 <meshPhongMaterial specularMap={specularMap} />
                 <meshStandardMaterial map={colorMap} normalMap={normalMap} metalness={0.4} roughness={0.7} />
